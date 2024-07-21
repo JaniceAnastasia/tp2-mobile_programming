@@ -1,0 +1,37 @@
+import turtle
+
+# Fungsi untuk menggambar segitiga
+def draw_triangle(color, size):
+    turtle.begin_fill()
+    turtle.fillcolor(color)
+    for _ in range(3):
+        turtle.forward(size)
+        turtle.left(120)
+    turtle.end_fill()
+
+# Fungsi untuk menggambar lingkaran
+def draw_circle(color, radius):
+    turtle.begin_fill()
+    turtle.fillcolor(color)
+    turtle.circle(radius)
+    turtle.end_fill()
+
+# Set up turtle
+turtle.speed(1)  # Kecepatan animasi (1 lambat, 10 cepat)
+turtle.bgcolor("white")  # Warna latar belakang
+
+# Gambar segitiga biru
+turtle.penup()
+turtle.goto(-50, 0)
+turtle.pendown()
+draw_triangle("blue", 100)
+
+# Gambar lingkaran kuning
+turtle.penup()
+turtle.goto(50, 0)
+turtle.pendown()
+draw_circle("yellow", 50)
+
+# Sembunyikan turtle dan selesaikan
+turtle.hideturtle()
+turtle.done()
