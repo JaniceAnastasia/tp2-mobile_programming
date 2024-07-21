@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Masuk</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="goToNextPage()">Masuk ke Halaman Selanjutnya</button>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            // Ganti URL berikut dengan URL halaman selanjutnya yang Anda inginkan
+            window.location.href = 'halaman-selanjutnya.html';
+        }
+    </script>
+</body>
+</html>
