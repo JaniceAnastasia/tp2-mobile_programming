@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kudapan Turtle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Kudapan Turtle</h1>
+        <div class="item" onclick="goToDetailPage('1')">
+            <img src="https://via.placeholder.com/200" alt="Turtle Snack 1">
+            <p>Choco Turtles - Cokelat dengan bentuk dan rasa khas yang memanjakan lidah Anda.</p>
+        </div>
+        <div class="item" onclick="goToDetailPage('2')">
+            <img src="https://via.placeholder.com/200" alt="Turtle Snack 2">
+            <p>Crunchy Turtle Bars - Bar cokelat yang renyah dengan kacang-kacangan dan karamel.</p>
+        </div>
+        <div class="item" onclick="goToDetailPage('3')">
+            <img src="https://via.placeholder.com/200" alt="Turtle Snack 3">
+            <p>Turtle Cookies - Kue kering dengan bentuk dan dekorasi yang menggemaskan.</p>
+        </div>
+    </div>
+
+    <script>
+        function goToDetailPage(itemId) {
+            // Ganti URL berikut dengan URL halaman detail sesuai dengan item yang diklik
+            window.location.href = 'detail.html?id=' + itemId;
+        }
+    </script>
+</body>
+</html>
