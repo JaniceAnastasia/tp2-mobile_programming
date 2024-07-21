@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kudapan Turtle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Kudapan Turtle</h1>
+        <div id="detailContent" class="item-detail">
+            <!-- Konten detail kudapan akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <script>
+        // Ambil parameter id dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = urlParams.get('id');
+
+        // Fungsi untuk menampilkan detail kudapan berdasarkan itemId
+        function showItemDetail(itemId) {
+            const detailContent = document.getElementById('detailContent');
+
+            // Contoh konten detail berdasarkan itemId
+            let detailHtml = '';
+            switch (itemId) {
+                case '1':
+                    detailHtml = `
+                        <img src="https://via.placeholder.com/400" alt="Choco Turtles">
+                        <h2>Choco Turtles</h2>
+                        <p>Cokelat dengan bentuk dan rasa khas yang memanjakan lidah Anda.</p>
+                        <p>Price: $5.99</p>
+                        <p>Ingredients: Chocolate, caramel, nuts.</p>
+                    `;
+                    break;
+                case '2':
+                    detailHtml = `
+                        <img src="https://via.placeholder.com/400" alt="Crunchy Turtle Bars">
+                        <h2>Crunchy Turtle Bars</h2>
+                        <p>Bar cokelat yang renyah dengan kacang-kacangan dan karamel.</p>
+                        <p>Price: $4.99</p>
+                        <p>Ingredients: Chocolate, nuts, caramel.</p>
+                    `;
+                    break;
+                case '3':
+                    detailHtml = `
+                        <img src="https://via.placeholder.com/400" alt="Turtle Cookies">
+                        <h2>Turtle Cookies</h2>
+                        <p>Kue kering dengan bentuk dan dekorasi yang menggemaskan.</p>
+                        <p>Price: $3.99</p>
+                        <p>Ingredients: Flour, sugar, chocolate chips.</p>
+                    `;
+                    break;
+                default:
+                    detailHtml = '<p>Item tidak ditemukan.</p>';
+                    break;
+            }
+
+            detailContent.innerHTML = detailHtml;
+        }
+
+        // Panggil fungsi untuk menampilkan detail kudapan saat halaman dimuat
+        showItemDetail(itemId);
+    </script>
+</body>
+</html>
