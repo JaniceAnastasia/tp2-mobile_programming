@@ -31,7 +31,10 @@
                         <img src="https://via.placeholder.com/400" alt="Choco Turtles">
                         <h2>Choco Turtles</h2>
                         <p>Cokelat dengan bentuk dan rasa khas yang memanjakan lidah Anda.</p>
-                        <p>Price: $5.99</p>
+                        <p><strong>Price:</strong> $5.99</p>
+                        <button onclick="addToCart('Choco Turtles')">Add to Cart</button>
+                        <button onclick="shareItem('Choco Turtles')">Share</button>
+                        <button onclick="viewLocation('Choco Turtles')">View Location</button>
                         <p>Ingredients: Chocolate, caramel, nuts.</p>
                     `;
                     break;
@@ -40,7 +43,10 @@
                         <img src="https://via.placeholder.com/400" alt="Crunchy Turtle Bars">
                         <h2>Crunchy Turtle Bars</h2>
                         <p>Bar cokelat yang renyah dengan kacang-kacangan dan karamel.</p>
-                        <p>Price: $4.99</p>
+                        <p><strong>Price:</strong> $4.99</p>
+                        <button onclick="addToCart('Crunchy Turtle Bars')">Add to Cart</button>
+                        <button onclick="shareItem('Crunchy Turtle Bars')">Share</button>
+                        <button onclick="viewLocation('Crunchy Turtle Bars')">View Location</button>
                         <p>Ingredients: Chocolate, nuts, caramel.</p>
                     `;
                     break;
@@ -49,7 +55,10 @@
                         <img src="https://via.placeholder.com/400" alt="Turtle Cookies">
                         <h2>Turtle Cookies</h2>
                         <p>Kue kering dengan bentuk dan dekorasi yang menggemaskan.</p>
-                        <p>Price: $3.99</p>
+                        <p><strong>Price:</strong> $3.99</p>
+                        <button onclick="addToCart('Turtle Cookies')">Add to Cart</button>
+                        <button onclick="shareItem('Turtle Cookies')">Share</button>
+                        <button onclick="viewLocation('Turtle Cookies')">View Location</button>
                         <p>Ingredients: Flour, sugar, chocolate chips.</p>
                     `;
                     break;
@@ -59,6 +68,24 @@
             }
 
             detailContent.innerHTML = detailHtml;
+        }
+
+        // Fungsi untuk menambahkan item ke keranjang belanja
+        function addToCart(itemName) {
+            alert('Added ' + itemName + ' to cart!');
+            // Implementasi tambahan untuk menambahkan ke keranjang belanja bisa dilakukan di sini
+        }
+
+        // Fungsi untuk berbagi item
+        function shareItem(itemName) {
+            alert('Share ' + itemName + ' on social media!');
+            // Implementasi tambahan untuk tombol share bisa dilakukan di sini
+        }
+
+        // Fungsi untuk melihat lokasi
+        function viewLocation(itemName) {
+            alert('View location of ' + itemName);
+            // Implementasi tambahan untuk menampilkan peta lokasi bisa dilakukan di sini
         }
 
         // Panggil fungsi untuk menampilkan detail kudapan saat halaman dimuat
